@@ -1,0 +1,78 @@
+// HIT for color name:
+// light  - lightest  - lighter
+// dark   - darkest   - darker
+
+// COLORS
+$black: #000;
+$black-mostly: #1a1a1a;
+$blue-dark: #5643fa;
+$blue-light: #2998ff;
+$gray-dark: #777;
+$gray-darker: #999;
+$gray-darkest: #333;
+$gray-light: #ccc;
+$gray-lighter: #f7f7f7;
+$gray-lightest: #eee;
+$gray-middle: #7b7b7b;
+$green-dark: #28b485;
+$green-light: #7ed56f;
+$green-medium: #55c57a;
+$orange: #ffb900;
+$orange-dark: #ff7730;
+$white: #fff;
+
+$colors: (
+  'black': $black,
+  'black-mostly': $black-mostly,
+  'blue-dark': $blue-dark,
+  'blue-light': $blue-light,
+  'gray-dark': $gray-dark,
+  'gray-darker': $gray-darker,
+  'gray-darkest': $gray-darkest,
+  'gray-light': $gray-light,
+  'gray-lighter': $gray-lighter,
+  'gray-lightest': $gray-lightest,
+  'gray-middle': $gray-middle,
+  'green-dark': $green-dark,
+  'green-light': $green-light,
+  'green-medium': $green-medium,
+  'orange': $orange,
+  'orange-dark': $orange-dark,
+  'white': $white
+);
+
+$primary: $green-medium;
+$primary-light: $green-light;
+$primary-dark: $green-dark;
+$secondary: $orange;
+$secondary-dark: $orange-dark;
+$tertiary: $blue-light;
+$tertiary-dark: $blue-dark;
+$shadow: $black-mostly;
+$shadow-light: $gray-light;
+$shadow-middle: $gray-middle;
+$text-color: $gray-dark;
+
+$theme-colors: (
+  'primary': $primary,
+  'primary-light': $primary-light,
+  'primary-dark': $primary-dark,
+  'secondary': $secondary,
+  'secondary-dark': $secondary-dark,
+  'tertiary': $tertiary,
+  'tertiary-dark': $tertiary-dark,
+  'shadow': $shadow,
+  'shadow-light': $shadow-light,
+  'shadow-middle': $shadow-middle,
+  'text-color': $text-color
+);
+
+// FONT
+$default-font-size: 1.6rem;
+
+// GRID
+$grid-width: 114rem;
+$grid-width-small: 50rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;

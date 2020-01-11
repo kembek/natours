@@ -1,0 +1,25 @@
+@function calcTwoGrid() {
+  @return calc((100% - #{$gutter-horizontal}) / 2);
+}
+
+@function calcThree($second: false) {
+  @return if(
+    $second,
+    calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}),
+    calc((100% - 2 * #{$gutter-horizontal}) / 3)
+  );
+}
+
+@function calcFour($column: 1) {
+  @if $column == 2 {
+    @return calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+  } @else if $column == 3 {
+    @return calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal} * 2
+    );
+  } @else {
+    @return calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+}

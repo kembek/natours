@@ -1,0 +1,118 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    padding: 1.5rem 4rem;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    position: relative;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3%);
+    box-shadow: 0 1rem 2rem rgba($black, 0.15);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1%);
+    box-shadow: 0 0.5rem 1rem rgba($black, 0.15);
+  }
+
+  &--white {
+    background-color: var(--white);
+    color: var(--text-color);
+
+    &::after {
+      background-color: var(--white);
+    }
+  }
+
+  &--green {
+    background-color: var(--primary);
+    color: var(--white);
+
+    &::after {
+      background-color: var(--primary);
+    }
+  }
+
+  &--animated {
+    animation-name: moveInBottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    border-radius: 10rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 3px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    transition: all 0.4s;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3%);
+    background-color: var(--primary);
+    color: var(--white);
+    box-shadow: 0 1rem 2rem var(--shadow-light);
+  }
+
+  &:active {
+    transform: translate(0);
+    box-shadow: 0 0.5rem 1rem var(--shadow-light);
+  }
+
+   &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: all 0.4s;
+    border-radius: 10rem;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}
+
+
